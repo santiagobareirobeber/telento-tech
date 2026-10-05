@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cine Aniplex - Cartelera y Reseñas</title>
+    <!-- CSS Externo -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- 1. HEADER Y NAV -->
+    <header class="navbar">
+        <div class="logo">Cine <span>Aniplex</span></div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#resenas">Reseñas</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 2. MAIN -->
+    <main>
+        <!-- Sección Inicio (Background Image y Degradado) -->
+        <section id="inicio" class="hero-section">
+            <div class="hero-content">
+                <h1>Bienvenido a Cine Aniplex</h1>
+                <p>Donde las historias cobran vida </p>
+                <a href="#productos" class="btn-primary">Ver Productos</a>
+            </div>
+        </section>
+
+        <!-- Sección Productos / Cartelera (Organizada con FLEXBOX) -->
+        <section id="productos" class="products-section">
+            <h2>Nuestros Productos</h2>
+            <div class="products-container">
+                <article class="product-card">
+                    <img src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=500&q=80" alt="Entrada Cine General" class="product-img">
+                    <h3>Entrada 2D / 3D</h3>
+                    <p>Acceso a las funciones generales de cartelera en salas tradicionales o 3D.</p>
+                    <span class="price">$5.000</span>
+                </article>
+
+                <article class="product-card">
+                    <img src="https://images.unsplash.com/photo-1585647347384-2593bc35786b?auto=format&fit=crop&w=500&q=80" alt="Combo Pochoclos" class="product-img">
+                    <h3>Combo Estrella XL</h3>
+                    <p>Balde de pochoclos gigantes + 2 bebidas a elección.</p>
+                    <span class="price">$8.500</span>
+                </article>
+
+                <article class="product-card">
+                    <img src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=500&q=80" alt="Sala VIP" class="product-img">
+                    <h3>Experiencia Sala VIP</h3>
+                    <p>Butacas reclinables, servicio a la mesa y menú gourmet durante la función.</p>
+                    <span class="price">$12.000</span>
+                </article>
+            </div>
+        </section>
+
+        <!-- Sección Reseñas (Organizada con GRID) -->
+        <section id="resenas" class="reviews-section">
+            <h2>Reseñas de Clientes</h2>
+            <div class="reviews-grid">
+                <article class="review-card">
+                    <p class="review-text">"La mejor calidad de sonido e imagen de la ciudad. Las instalaciones siempre impecables."</p>
+                    <span class="author">- Carlos M.</span>
+                </article>
+                <article class="review-card">
+                    <p class="review-text">"Excelente la atención en la sala VIP y muy fácil la compra de entradas por la web."</p>
+                    <span class="author">- Ana P.</span>
+                </article>
+                <article class="review-card">
+                    <p class="review-text">"El combo de pochoclos gigante es imperdible. Volveremos siempre."</p>
+                    <span class="author">- Juan D.</span>
+                </article>
+                <article class="review-card">
+                    <p class="review-text">"Ubicación súper accesible al lado del Obelisco. Muy recomendado."</p>
+                    <span class="author">- Sofía L.</span>
+                </article>
+            </div>
+        </section>
+
+        <!-- Sección Contacto (Formulario Formspree + Iframe + Media Queries) -->
+        <section id="contacto" class="contact-section">
+            <h2>Contacto y Ubicación</h2>
+            <div class="contact-container">
+                
+                <!-- Formulario Formspree -->
+                <div class="contact-form-box">
+                    <h3>Envíanos un mensaje</h3>
+                    <form action="https://formspree.io/f/tu-id-de-formspree" method="POST" class="contact-form">
+                        <div class="form-group">
+                            <label for="nombre">Nombre</label>
+                            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Correo electrónico</label>
+                            <input type="email" id="email" name="email" placeholder="correo@ejemplo.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="mensaje">Mensaje</label>
+                            <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu mensaje aquí..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary">Enviar Mensaje</button>
+                    </form>
+                </div>
+
+                <!-- Mapa Iframe Multimedia (Ubicación Obelisco) -->
+                <div class="map-box">
+                    <h3>Nuestra Ubicación</h3>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.016887889505!2d-58.3837590234796!3d-34.60373887295484!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4aa9f0a6da5edb6b%3A0x11eade7e464434b6!2sObelisco!5e0!3m2!1ses-419!2sar!4v1700000000000!5m2!1ses-419!2sar" width="100%" height="280" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- 3. FOOTER -->
+    <footer>
+        <p>&copy; 2026 Cine Aniplex. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
